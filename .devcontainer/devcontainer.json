@@ -1,0 +1,31 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "rohit-gohri.format-code-action"
+      ],
+      "settings": {
+        "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false,
+        "extensions.ignoreRecommendations": true,
+        "git.confirmSync": false,
+        "git.enableSmartCommit": true,
+        "github.codespaces.devcontainerChangedNotificationStyle": "none",
+        "prettier.prettierPath": "./node_modules/prettier",
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "workbench.editor.enablePreview": false,
+        "workbench.startupEditor": "none"
+      }
+    }
+  },
+  "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/codespace/.ssh,type=bind,consistency=cached"
+  ],
+  "name": "GitHub Action",
+  "onCreateCommand": "git config pull.rebase false",
+  "postStartCommand": "git fetch"
+}
