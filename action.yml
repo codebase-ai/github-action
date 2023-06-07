@@ -1,0 +1,18 @@
+name: "create-embeddings"
+description: "Create embeddings for code with OpenAI embeddings API"
+branding:
+  icon: "file-text"
+  color: "green"
+inputs:
+  input-one:
+    description: "Description of input-one"
+    required: false
+    default: "default value goes here"
+outputs:
+  output-one:
+    description: "Description of output-one"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.input-one }}
