@@ -1,21 +1,11 @@
 {
   "customizations": {
     "vscode": {
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "rohit-gohri.format-code-action"
-      ],
       "settings": {
-        "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": false,
         "extensions.ignoreRecommendations": true,
         "git.confirmSync": false,
         "git.enableSmartCommit": true,
         "github.codespaces.devcontainerChangedNotificationStyle": "none",
-        "prettier.prettierPath": "./node_modules/prettier",
-        "typescript.updateImportsOnFileMove.enabled": "always",
         "workbench.editor.enablePreview": false,
         "workbench.startupEditor": "none"
       }
